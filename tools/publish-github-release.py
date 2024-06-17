@@ -71,6 +71,7 @@ def publish_release(*, owner: str, repository_name: str, token: str, tag: str) -
     click.echo(f"published {release.name}")
 
 
+# TODO: refactor this code to use argparse instead of click
 @click.command()
 @click.option(
     "--owner",

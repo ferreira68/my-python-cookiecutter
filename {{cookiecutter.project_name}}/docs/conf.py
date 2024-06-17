@@ -9,4 +9,4 @@ extensions = [
     "myst_parser",
 ]
 autodoc_typehints = "description"
-html_theme = "furo"
+html_theme = "pd"

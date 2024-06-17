@@ -81,7 +81,7 @@ def prepare_release(
 
     click.echo(f"added labels {', '.join(label_names)} to #{pull_request.number}")
 
-
+# TODO: refactor to remove click (replace with argparse)
 @click.command()
 @click.option(
     "--owner",
