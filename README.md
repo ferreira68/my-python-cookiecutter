@@ -68,14 +68,11 @@ cookiecutter gh:cjolowicz/cookiecutter-hypermodern-python --checkout=2022.6.3
 - Testing with [pytest]
 - Code coverage with [Coverage.py]
 - Coverage reporting with [Codecov]
-- Command-line interface with [Click]
 - Static type-checking with [mypy]
-- Runtime type-checking with [Typeguard]
 - Automated Python syntax upgrades with [pyupgrade]
 - Security audit with [Bandit] and [Safety]
 - Check documentation examples with [xdoctest]
 - Generate API documentation with [autodoc] and [napoleon]
-- Generate command-line reference with [sphinx-click]
 - Manage project labels with [GitHub Labeler]
 
 The template supports Python 3.7, 3.8, 3.9, and 3.10.
@@ -83,7 +80,6 @@ The template supports Python 3.7, 3.8, 3.9, and 3.10.
 [autodoc]: https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
 [bandit]: https://github.com/PyCQA/bandit
 [black]: https://github.com/psf/black
-[click]: https://click.palletsprojects.com/
 [codecov]: https://codecov.io/
 [coverage.py]: https://coverage.readthedocs.io/
 [dependabot]: https://github.com/dependabot/dependabot-core
@@ -105,10 +101,8 @@ The template supports Python 3.7, 3.8, 3.9, and 3.10.
 [read the docs]: https://readthedocs.org/
 [release drafter]: https://github.com/release-drafter/release-drafter
 [safety]: https://github.com/pyupio/safety
-[sphinx]: http://www.sphinx-doc.org/
 [sphinx-click]: https://sphinx-click.readthedocs.io/
 [testpypi]: https://test.pypi.org/
-[typeguard]: https://github.com/agronholm/typeguard
 [xdoctest]: https://github.com/Erotemic/xdoctest
 
 <!-- features-end -->

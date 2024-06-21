@@ -7,7 +7,7 @@ from unittest.mock import patch
 
 import pytest
 
-from hypermodern_python import __main__
+from {{ cookiecutter.package_name }} import __main__
 
 
 @pytest.fixture
