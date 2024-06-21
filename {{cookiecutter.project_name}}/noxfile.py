@@ -23,8 +23,8 @@ except ImportError:
     raise SystemExit(dedent(message)) from None
 
 
-package = "{{cookiecutter.package_name}}"
-python_versions = ["3.11", "3.10", "3.9", "3.8", "3.7"]
+package = "hypermodern_python"
+python_versions = ["3.10", "3.11", "3.9"]
 nox.needs_version = ">= 2021.6.6"
 nox.options.sessions = (
     "pre-commit",
@@ -110,7 +110,7 @@ def activate_virtualenv_in_precommit_hooks(session: Session) -> None:
                 break
 
 
-@session(name="pre-commit", python=python_versions[0])
+@session(name="pre-commit")
 def precommit(session: Session) -> None:
     """Lint using pre-commit."""
     args = session.posargs or [
@@ -128,7 +128,6 @@ def precommit(session: Session) -> None:
         "flake8-docstrings",
         "flake8-rst-docstrings",
         "isort",
-        "pep8-naming",
         "pre-commit",
         "pre-commit-hooks",
         "pyupgrade",
@@ -138,7 +137,7 @@ def precommit(session: Session) -> None:
         activate_virtualenv_in_precommit_hooks(session)
 
 
-@session(python=python_versions[0])
+@session()
 def safety(session: Session) -> None:
     """Scan dependencies for insecure packages."""
     requirements = session.poetry.export_requirements()
@@ -149,7 +148,7 @@ def safety(session: Session) -> None:
 @session(python=python_versions)
 def mypy(session: Session) -> None:
     """Type-check using mypy."""
-    args = session.posargs or ["src", "tests", "docs/conf.py"]
+    args = session.posargs or ["src", "tests"]
     session.install(".")
     session.install("mypy", "pytest")
     session.run("mypy", *args)
@@ -169,7 +168,7 @@ def tests(session: Session) -> None:
             session.notify("coverage", posargs=[])
 
 
-@session(python=python_versions[0])
+@session()
 def coverage(session: Session) -> None:
     """Produce the coverage report."""
     args = session.posargs or ["report"]
@@ -182,7 +181,7 @@ def coverage(session: Session) -> None:
     session.run("coverage", *args)
 
 
-@session(python=python_versions[0])
+@session()
 def typeguard(session: Session) -> None:
     """Runtime type checking using Typeguard."""
     session.install(".")
@@ -205,29 +204,40 @@ def xdoctest(session: Session) -> None:
     session.run("python", "-m", "xdoctest", *args)
 
 
-@session(name="docs-build", python=python_versions[0])
+@session(name="docs-build")
 def docs_build(session: Session) -> None:
     """Build the documentation."""
-    args = session.posargs or ["docs", "docs/_build"]
-    if not session.posargs and "FORCE_COLOR" in os.environ:
-        args.insert(0, "--color")
-
     session.install(".")
-    session.install("sphinx", "sphinx-click", "furo", "myst-parser")
+    session.install("sphinx", "sphinx-autobuild", "sphinx-theme-pd", "myst-parser")
 
     build_dir = Path("docs", "_build")
     if build_dir.exists():
         shutil.rmtree(build_dir)
 
-    session.run("sphinx-build", *args)
+    session.run(
+        "sphinx-apidoc",
+        "-f",
+        "--ext-autodoc",
+        "--ext-intersphinx",
+        "--ext-viewcode",
+        "--ext-todo",
+        "-t",
+        "docs/_templates",
+        "-o",
+        "docs/_source",
+        "src",
+    )
+    session.run("sphinx-build", "-v", "-b", "html", "docs", "docs/_build")
 
 
-@session(python=python_versions[0])
+@session()
 def docs(session: Session) -> None:
     """Build and serve the documentation with live reloading on file changes."""
     args = session.posargs or ["--open-browser", "docs", "docs/_build"]
     session.install(".")
-    session.install("sphinx", "sphinx-autobuild", "sphinx-click", "furo", "myst-parser")
+    session.install(
+        "sphinx", "sphinx-autobuild", "sphinx-click", "sphinx-theme-pd", "myst-parser"
+    )
 
     build_dir = Path("docs", "_build")
     if build_dir.exists():
@@ -236,7 +246,7 @@ def docs(session: Session) -> None:
     session.run("sphinx-autobuild", *args)
 
 
-@session(python=python_versions[0])
+@session()
 def release(session: nox.Session) -> None:
     """
     Kicks off an automated release process by creating and pushing a new tag.

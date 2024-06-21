@@ -4,4 +4,4 @@ end-before: <!-- github-only -->
 ---
 ```
 
-[code of conduct]: codeofconduct
+[code of conduct]: codeofconduct.md

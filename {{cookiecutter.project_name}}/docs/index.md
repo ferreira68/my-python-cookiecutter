@@ -4,17 +4,18 @@ end-before: <!-- github-only -->
 ---
 ```
 
-[license]: license
-[contributor guide]: contributing
-[command-line reference]: usage
+[license]: license.md
+[contributor guide]: contributing.md
+[command-line reference]: usage.md
 
 ```{toctree}
 ---
-hidden:
-maxdepth: 1
+maxdepth: 4
 ---
 
 usage
+_source/{{cookiecutter.package_name}}
+_source/modules
 reference
 contributing
 Code of Conduct <codeofconduct>

@@ -1,8 +1,9 @@
 """Command-line interface."""
 
 
-def main() -> None:
+def main(prog_name: str) -> None:
     """{{cookiecutter.friendly_name}}."""
+    print(f"Running {prog_name}")
 
 
 if __name__ == "__main__":

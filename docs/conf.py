@@ -1,14 +1,16 @@
 """Sphinx configuration."""
 from datetime import datetime
+import sphinx_theme_pd
 
 
 project = "Hypermodern Python Cookiecutter"
 author = "Antonio M. Ferreira, Ph.D."
 copyright = f"{datetime.now().year}, {author}"
-extensions = ["sphinx.ext.intersphinx", "myst_parser"]
+extensions = ["sphinx.ext.intersphinx", "sphinx.ext.napoleon", "myst_parser", "sphinx.ext.autodoc"]
 intersphinx_mapping = {"mypy": ("https://mypy.readthedocs.io/en/stable/", None)}
 language = "en"
-html_theme = "pd"
+html_theme = "sphinx_theme_pd"
+html_theme_path = [sphinx_theme_pd.get_html_theme_path()]
 html_logo = "_static/logo.png"
 linkcheck_ignore = [
     "codeofconduct.html",

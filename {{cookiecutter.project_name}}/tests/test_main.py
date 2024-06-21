@@ -1,17 +1,34 @@
-"""Test cases for the __main__ module."""
-import pytest
-from click.testing import CliRunner
+"""Pytest test for main entry point."""
+import sys
+from io import StringIO
+from typing import Callable
+from typing import Tuple
+from unittest.mock import patch
 
-from {{cookiecutter.package_name}} import __main__
+import pytest
+
+from hypermodern_python import __main__
 
 
 @pytest.fixture
-def runner() -> CliRunner:
+def runner() -> Callable[[str], Tuple[int, str, str]]:
     """Fixture for invoking command-line interfaces."""
-    return CliRunner()
+
+    def run(args: str) -> Tuple[int, str, str]:
+        with patch.object(sys, "argv", args.split()):
+            with patch("sys.stdout", new_callable=StringIO) as stdout:
+                with patch("sys.stderr", new_callable=StringIO) as stderr:
+                    try:
+                        __main__.main(prog_name=args.split()[0])
+                        return 0, stdout.getvalue(), stderr.getvalue()
+                    except SystemExit as e:
+                        exit_code = e.code if isinstance(e.code, int) else 1
+                        return exit_code, stdout.getvalue(), stderr.getvalue()
+
+    return run
 
 
-def test_main_succeeds(runner: CliRunner) -> None:
+def test_main_succeeds(runner: Callable[[str], Tuple[int, str, str]]) -> None:
     """It exits with a status code of zero."""
-    result = runner.invoke(__main__.main)
-    assert result.exit_code == 0
+    exit_code, stdout, stderr = runner("program_name")
+    assert exit_code == 0

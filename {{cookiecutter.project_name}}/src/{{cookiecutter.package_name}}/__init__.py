@@ -1,1 +1,1 @@
-"""{{cookiecutter.friendly_name}}."""
+"""{{ cookiecutter.package_name }} package."""

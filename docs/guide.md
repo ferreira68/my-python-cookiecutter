@@ -662,7 +662,7 @@ The `docs` directory contains two more files:
 
 The project documentation is built and hosted on
 [Read the Docs](read-the-docs-integration),
-and uses the [furo] Sphinx theme.
+and uses the [PD] Sphinx theme.
 
 You can also build the documentation locally using Nox,
 see [The docs session](the-docs-session).
@@ -851,7 +851,7 @@ See the table below for an overview of the dependencies of generated projects:
   - Extension for flake8 which uses pydocstyle to check docstrings
 - - [flake8-rst-docstrings]
   - Python docstring reStructuredText (RST) validator
-- - [furo]
+- - [PD]
   - A clean customisable Sphinx documentation theme.
 - - [isort]
   - A Python utility / library to sort Python imports.
@@ -2629,7 +2629,7 @@ You can also read the articles on [this blog][hypermodern python blog].
 [flake8-rst-docstrings codes]: https://github.com/peterjc/flake8-rst-docstrings#flake8-validation-codes
 [flake8-rst-docstrings]: https://github.com/peterjc/flake8-rst-docstrings
 [flake8]: http://flake8.pycqa.org
-[furo]: https://pradyunsg.me/furo/
+[PD]: https://sphinx-themes.org/sample-sites/sphinx-theme-pd/
 [future imports]: https://docs.python.org/3/library/__future__.html
 [gabor version]: https://bernat.tech/posts/version-numbers/
 [git hook]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks

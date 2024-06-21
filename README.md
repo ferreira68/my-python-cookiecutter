@@ -59,7 +59,7 @@ cookiecutter gh:cjolowicz/cookiecutter-hypermodern-python --checkout=2022.6.3
 - Test automation with [Nox]
 - Linting with [pre-commit] and [Flake8]
 - Continuous integration with [GitHub Actions]
-- Documentation with [Sphinx], [MyST], and [Read the Docs] using the [furo] theme
+- Documentation with [Sphinx], [MyST], and [Read the Docs] using the [PD] theme
 - Automated uploads to [PyPI] and [TestPyPI]
 - Automated release notes with [Release Drafter]
 - Automated dependency updates with [Dependabot]
@@ -88,7 +88,7 @@ The template supports Python 3.7, 3.8, 3.9, and 3.10.
 [coverage.py]: https://coverage.readthedocs.io/
 [dependabot]: https://github.com/dependabot/dependabot-core
 [flake8]: http://flake8.pycqa.org
-[furo]: https://pradyunsg.me/furo/
+[PD]: https://sphinx-themes.org/sample-sites/sphinx-theme-pd/
 [github actions]: https://github.com/features/actions
 [github labeler]: https://github.com/marketplace/actions/github-labeler
 [isort]: https://pycqa.github.io/isort/
