@@ -1,6 +1,6 @@
 # Contributor Guide
 
-Thank you for your interest in improving the Hypermodern Python Cookiecutter.
+Thank you for your interest in improving this Cookiecutter.
 This project is open-source under the [MIT license] and
 welcomes contributions in the form of bug reports, feature requests, and pull requests.
 
@@ -135,15 +135,15 @@ After publishing the release, the following automated steps are triggered:
 [continuous integration]: https://cookiecutter-hypermodern-python.readthedocs.io/en/stable/quickstart.html#continuous-integration
 [cookiecutter]: https://cookiecutter.readthedocs.io/
 [documentation]: https://cookiecutter-hypermodern-python.readthedocs.io/
-[github]: https://github.com/cjolowicz/cookiecutter-hypermodern-python
-[issue tracker]: https://github.com/cjolowicz/cookiecutter-hypermodern-python/issues
+[github]: https://github.com/ferreira68/my-python-cookiecutter
+[issue tracker]: https://github.com/ferreira68/my-python-cookiecutter/issues
 [mit license]: https://opensource.org/licenses/MIT
 [nox]: https://nox.thea.codes/
 [nox-poetry]: https://nox-poetry.readthedocs.io/
 [poetry]: https://python-poetry.org/
-[pull request]: https://github.com/cjolowicz/cookiecutter-hypermodern-python/pulls
+[pull request]: https://github.com/ferreira68/my-python-cookiecutter/pulls
 [read the docs]: https://cookiecutter-hypermodern-python.readthedocs.io/
-[source code]: https://github.com/cjolowicz/cookiecutter-hypermodern-python
+[source code]: https://github.com/ferreira68/my-python-cookiecutter
 [user guide]: https://cookiecutter-hypermodern-python.readthedocs.io/en/latest/guide.html#how-to-test-your-project
 
 <!-- github-only -->

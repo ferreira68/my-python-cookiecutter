@@ -48,7 +48,7 @@
 ## Usage
 
 ```console
-cookiecutter gh:cjolowicz/cookiecutter-hypermodern-python --checkout=2022.6.3
+cookiecutter gh:ferreira68/my-python-cookiecutter
 ```
 
 ## Features
@@ -101,7 +101,7 @@ The template supports Python 3.9, 3.10, and 3.11.
 [read the docs]: https://readthedocs.org/
 [release drafter]: https://github.com/release-drafter/release-drafter
 [safety]: https://github.com/pyupio/safety
-[sphinx-click]: https://sphinx-click.readthedocs.io/
+[sphinx]: https://www.sphinx-doc.org/en/master/
 [testpypi]: https://test.pypi.org/
 [xdoctest]: https://github.com/Erotemic/xdoctest
 
