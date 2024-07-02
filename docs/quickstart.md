@@ -159,7 +159,7 @@ by applying labels to them, like this:
 [codecov]: https://codecov.io/
 [cookiecutter]: https://github.com/audreyr/cookiecutter
 [github]: https://github.com/
-[install-poetry.py]: https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py
+[install-poetry.py]: https://python-poetry.org/docs/cli/#install
 [nox]: https://nox.thea.codes/
 [nox-poetry]: https://nox-poetry.readthedocs.io/
 [pipx]: https://pipxproject.github.io/pipx/

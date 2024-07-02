@@ -2625,7 +2625,7 @@ You can also read the articles on [this blog][hypermodern python blog].
 [flake8-bandit]: https://github.com/tylerwince/flake8-bandit
 [flake8-bugbear codes]: https://github.com/PyCQA/flake8-bugbear#list-of-warnings
 [flake8-bugbear]: https://github.com/PyCQA/flake8-bugbear
-[flake8-docstrings]: https://gitlab.com/pycqa/flake8-docstrings
+[flake8-docstrings]: https://github.com/pycqa/flake8-docstrings
 [flake8-rst-docstrings codes]: https://github.com/peterjc/flake8-rst-docstrings#flake8-validation-codes
 [flake8-rst-docstrings]: https://github.com/peterjc/flake8-rst-docstrings
 [flake8]: http://flake8.pycqa.org
@@ -2653,7 +2653,7 @@ You can also read the articles on [this blog][hypermodern python blog].
 [hypermodern python cookiecutter]: https://github.com/cjolowicz/cookiecutter-hypermodern-python
 [hypermodern python]: https://medium.com/@cjolowicz/hypermodern-python-d44485d9d769
 [import hook]: https://docs.python.org/3/reference/import.html#import-hooks
-[install-poetry.py]: https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py
+[install-poetry.py]: https://python-poetry.org/docs/#installation
 [isort black profile]: https://pycqa.github.io/isort/docs/configuration/black_compatibility.html
 [isort force_single_line]: https://pycqa.github.io/isort/docs/configuration/options.html#force-single-line
 [isort lines_after_imports]: https://pycqa.github.io/isort/docs/configuration/options.html#lines-after-imports
@@ -2711,7 +2711,7 @@ You can also read the articles on [this blog][hypermodern python blog].
 [pypa/gh-action-pypi-publish]: https://github.com/pypa/gh-action-pypi-publish
 [pypi]: https://pypi.org/
 [pyproject.toml]: https://python-poetry.org/docs/pyproject/
-[pytest layout]: https://docs.pytest.org/en/latest/explanation/goodpractices.html#choosing-a-test-layout-import-rules
+[pytest layout]: https://docs.pytest.org/en/latest/explanation/goodpractices.html#choosing-a-test-layout
 [pytest]: https://docs.pytest.org/en/latest/
 [python build]: https://python-poetry.org/docs/cli/#build
 [python package]: https://docs.python.org/3/tutorial/modules.html#packages
